@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:)</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 48px;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.3s ease;
+        }
+
+        .rotated {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="smiley">:)</h1>
+
+    <script>
+        const smiley = document.getElementById('smiley');
+        let isRotated = false;
+
+        smiley.addEventListener('click', () => {
+            isRotated = !isRotated;
+            if (isRotated) {
+                smiley.classList.add('rotated');
+            } else {
+                smiley.classList.remove('rotated');
+            }
+        });
+    </script>
+</body>
+</html>
